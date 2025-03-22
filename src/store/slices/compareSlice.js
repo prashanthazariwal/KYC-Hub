@@ -9,7 +9,6 @@ const compareSlice = createSlice({
   initialState,
   reducers: {
     addToCompare: (state, action) => {
-      // Check if product already exists and max limit not reached
       if (
         state.compareProducts.length < 4 &&
         !state.compareProducts.find(

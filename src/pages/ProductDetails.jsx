@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import { Table } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,7 +8,6 @@ import { addToCompare } from "../store/slices/compareSlice";
 const ProductDetails = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [searchText, setSearchText] = useState("");
 
   const { products, loading } = useSelector((state) => state.products);
   const { compareProducts } = useSelector((state) => state.compare);
@@ -90,6 +89,7 @@ const ProductDetails = () => {
 
   return (
     <Table
+    className="w-full"
       columns={columns}
       dataSource={products}
       loading={loading}

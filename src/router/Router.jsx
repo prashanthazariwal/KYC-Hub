@@ -15,7 +15,7 @@ const Router = () => {
             path={path}
             element={
               <div className="space-y-4">
-                <h1 className="text-2xl font-bold text-gray-800">{title}</h1>
+                <h1 className="text-3xl font-bold text-gray-800">{title}</h1>
                 <Component />
               </div>
             }
